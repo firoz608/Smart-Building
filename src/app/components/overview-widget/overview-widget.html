@@ -1,0 +1,66 @@
+<div class="widget">
+
+  <h2>Organization Overview</h2>
+
+  <div *ngIf="loading" class="loader"></div>
+
+  <div *ngIf="error" class="error">
+    Failed to load overview data.
+  </div>
+
+  <div class="grid" *ngIf="!loading && !error">
+
+    <div class="card" style="border-left: 6px solid #2563eb;">
+      <div>
+
+        <h3>Buildings</h3>
+        <p>{{data.buildings}}</p>
+      </div>
+      <div class="material-icons-outlined" style="background:rgb(51, 75, 233); ">apartment</div>
+    </div>
+
+    <div class="card" style="border-left: 6px solid #f97316;">
+      <div>
+        <h3>Users</h3>
+        <p>{{data.users}}</p>
+      </div>
+      <div class="material-icons-outlined" style="background:rgb(255, 109, 0);">account_circle</div>
+    </div>
+
+    <div class="card" style="border-left: 6px solid #ef4444;">
+      <div>
+        <h3>Assets</h3>
+        <p>{{data.assets}}</p>
+      </div>
+      <div class="material-icons-outlined" style="background: rgb(239, 68, 68);">inventory</div>  
+    </div>
+
+    <div class="card" style="border-left: 6px solid #10b981;">
+      <div>
+
+        <h3>Health Score</h3>
+        <p>{{data.healthScore}}%</p>
+      </div>
+      <div class="material-icons-outlined" style="background:rgb(46, 125, 50);">medical_information</div>  
+    </div>
+
+    <div class="card" style="border-left: 6px solid #8b5cf6;">
+      <div>
+
+        <h3>Work Orders</h3>
+        <p>{{data.workOrders}}</p>
+      </div>
+      <div class="material-icons-outlined" style="background:rgb(16, 185, 129);">assignment</div>
+    </div>
+
+    <div class="card" style="border-left: 6px solid #dc2626;">
+      <div>
+        <h3>Alarms</h3>
+        <p>{{data.alarms}}</p>
+      </div>
+      <div class="material-icons-outlined" style="background:rgb(213, 0, 0);">notifications</div>
+    </div>
+
+  </div>
+
+</div>

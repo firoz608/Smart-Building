@@ -1,0 +1,76 @@
+.widget {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Loader */
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ddd;
+  border-top: 4px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* Building Accordion */
+.building {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.building-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: #f5f7fb;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Floors */
+.floor-list {
+  padding: 10px;
+  background: #fafafa;
+}
+
+.floor-card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+/* Grid stats */
+.grid {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.box {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.green { background: #e8f5e9; }
+.orange { background: #fff3e0; }
+.red { background: #ffebee; }
+
+.energy {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555;
+}

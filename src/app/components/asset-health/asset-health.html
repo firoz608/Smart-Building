@@ -1,0 +1,58 @@
+<div class="widget">
+
+  <h2>Asset Health Summary</h2>
+
+  @if (loading()) {
+    <div class="loader"></div>
+  }
+
+  @if (!loading()) {
+
+    <div class="building" *ngFor="let b of data(); let i = index">
+
+      <!-- Building Header -->
+      <div class="building-header" (click)="toggle(i)">
+        <h3>{{ b.building }}</h3>
+        <span>{{ openIndex === i ? '▲' : '▼' }}</span>
+      </div>
+
+      <!-- Floors -->
+      @if (openIndex === i) {
+
+        <div class="floor-list">
+
+          <div class="floor-card" *ngFor="let f of b.floors">
+
+            <h4>{{ f.name }}</h4>
+
+            <div class="grid">
+
+              <div class="box green">
+                Healthy: {{ f.assets.healthy }}
+              </div>
+
+              <div class="box orange">
+                Warning: {{ f.assets.warning }}
+              </div>
+
+              <div class="box red">
+                Critical: {{ f.assets.critical }}
+              </div>
+
+            </div>
+
+            <p class="energy">
+              ⚡ Energy: {{ f.energy.consumption }} {{ f.energy.unit }}
+            </p>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  }
+
+</div>

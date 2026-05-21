@@ -1,0 +1,14 @@
+<div class="widget">
+
+  <h2>Device Health Analytics</h2>
+
+  <div *ngIf="loading" class="loader"></div>
+
+  <canvas
+    *ngIf="!loading"
+    baseChart
+    [data]="lineChartData"
+    chartType="line">
+  </canvas>
+
+</div>

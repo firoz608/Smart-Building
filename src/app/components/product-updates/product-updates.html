@@ -1,0 +1,30 @@
+<div class="widget">
+
+  <h2>Product Updates</h2>
+
+  <div *ngIf="loading" class="loader"></div>
+
+  <div class="timeline">
+
+    <div *ngFor="let update of updates" class="update-card">
+
+      <div class="dot"></div>
+
+      <div class="content">
+        <p class="version">{{update.id}}</p>
+
+        <h3>{{ update.title }}</h3>
+
+        <p class="version">Version: {{ update.version }}</p>
+
+        <small class="date">
+          {{ update.releaseDate | date:'mediumDate' }}
+        </small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

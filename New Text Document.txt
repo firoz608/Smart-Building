@@ -1,0 +1,79 @@
+# 🏢 Smart Building Admin Dashboard
+
+A responsive Smart Building Admin Dashboard built using Angular 20.  
+This project demonstrates enterprise-style dashboard architecture using mock APIs, asynchronous data handling, charts, maps, and responsive UI components.
+
+---
+
+# 🚀 Features
+
+## ✅ Organization Overview
+- Statistical KPI cards
+- Responsive grid layout
+- Icons and badges
+- Loading & error states
+
+## ✅ Product Updates
+- Timeline/feed style UI
+- Release notes display
+- Version badges
+- Responsive design
+
+## ✅ Asset Health Summary
+- Building-wise and floor-wise asset data
+- Nested accordions/cards
+- Energy consumption display
+
+## ✅ Interactive Building Map
+- Built using Leaflet + OpenStreetMap
+- Dynamic markers from mock API
+- Popup details on click/hover
+- Responsive map layout
+
+## ✅ Device Health Analytics
+- Chart.js integration
+- Device health trend visualization
+- Loading spinner support
+
+---
+
+# 🛠️ Tech Stack
+
+- Angular 20
+- TypeScript
+- HTML5
+- CSS3
+- Leaflet
+- OpenStreetMap
+- Chart.js
+- ng2-charts
+
+---
+
+# 📂 Project Structure
+
+```bash
+src/
+│
+├── app/
+│   ├── components/
+│   │   ├── overview/
+│   │   ├── product-updates/
+│   │   ├── asset-health/
+│   │   ├── building-map/
+│   │   └── device-health/
+│   │
+│   ├── services/
+│   │   └── dashboard.service.ts
+│   │
+│   └── app.routes.ts
+│
+├── assets/
+│   └── data/
+│       ├── overview.json
+│       ├── updates.json
+│       ├── assets-health.json
+│       ├── buildings.json
+│       └── device-health.json
+│
+└── styles.css

@@ -1,0 +1,83 @@
+
+
+
+  <body>
+    <!-- <div class="grid-container"> -->
+      <!-- Header -->
+     <header class="header">
+
+  <div class="logo">
+    SMART BUILDING
+  </div>
+
+  <!-- hamburger button (mobile only) -->
+  <div class="menu-icon" (click)="toggleMenu = !toggleMenu">
+    <span class="material-icons-outlined">menu</span>
+  </div>
+
+  <!-- nav links -->
+  <div class="header-left" [class.active]="toggleMenu">
+
+    <ul class="list">
+      <li class="list-item">
+        <a routerLink="/overview" (click)="toggleMenu = !toggleMenu">
+          <span class="material-icons-outlined">dashboard</span> OVERVIEW
+        </a>
+      </li>
+
+      <li class="list-item">
+        <a routerLink="/product" (click)="toggleMenu = !toggleMenu">
+          <span class="material-icons-outlined">inventory_2</span> Product Updates
+        </a>
+      </li>
+
+      <li class="list-item">
+        <a routerLink="/asset-health" (click)="toggleMenu = !toggleMenu ">
+          <span class="material-icons-outlined">health_and_safety</span> Asset Health Summary
+        </a>
+      </li>
+
+      <li class="list-item">
+        <a routerLink="/interactive-map" (click)="toggleMenu = !toggleMenu">
+          <span class="material-icons-outlined">map</span> Interactive Map
+        </a>
+      </li>
+
+      <li class="list-item">
+        <a routerLink="/device-health" (click)="toggleMenu = !toggleMenu">
+          <span class="material-icons-outlined">monitor_heart</span> Device Health
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+</header>
+      <!-- End Header -->
+
+     
+      
+    <!-- </div> -->
+
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="dashboard">
+  
+  <app-overview-widget></app-overview-widget>
+
+ 
+
+</div> -->
+
+<router-outlet />
